@@ -1,0 +1,12 @@
+import React from "react";
+function Funtionprops(props){
+    return(
+        <div>
+            <h3>This if functional component</h3>
+            <h3>
+                Hello{props.name}from{props.place}Welcome to react.js props
+            </h3>
+        </div>
+    );
+}
+export default Functionprops;

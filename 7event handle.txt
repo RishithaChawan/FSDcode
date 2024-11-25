@@ -1,0 +1,36 @@
+/*import React from 'react';
+function football(){
+    const shoot=()=>{alert("great shot!");
+         };
+         return(
+          <button onClick={(shoot)}>take the shot!</button>
+         );
+       }
+       export default football;*/
+
+
+       /*function football(){
+        const shoot=(a)=>{alert("great shoot");
+       }
+       return(
+        <button onClick={()=>shoot("goal")}>take the shot!</button>
+       );
+      }
+      export default football;*/
+
+
+      function football(){
+      const shoot=(a,b)=>{
+        alert(b.type);
+        };
+        return(
+        <button onClick={(event)=>shoot("goal",event)}>
+        take the shot!</button>
+        );
+        }
+        export default football;
+
+
+
+
+         

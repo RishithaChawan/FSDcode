@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Form Elements</title>
+    </head>
+    <body>
+        <form>
+            <label>Text Box</label>
+            <input type="Text" id="t1" name="Name" value=""/><br><br>
+            Radio button: <br>
+            <input type="radio" id="r1" name="" Value=""/>Male<br><br>
+            <input type="radio" id="r1" name="" Value=""/>Female<br><br>
+            Check box:
+            <input type="Checkbox" id="c1" name="" value=""/><br><br>
+            File:
+            <input type="file" id="c1" name="file" value=""/><br><br>
+            Select:<br>
+            <label>Sem</label>
+            <select name="Sem" id="Sem">
+                <option value="1"> 1sem</option>
+                <option value="2"> 2sem</option>
+            </select><br><br>
+            Text Area :<br>
+            <textarea id="ta 1" name="Text area" rows="4" cols="50">
+                At W3 School.com You will learn how to make a website.
+            </textarea><br><br>
+            <fieldset>
+                <legend> Personal deatils:</legend>
+                <label>     First Name:  </label>
+                <input type="text" id="fname" name="fname"><br><br>
+                <label>     Last Name:  </label>
+                <input type="text" id="lname" name="lname"><br><br>
+            </fieldset> <br><br>
+            Button:<input type="button" id="t1" name="" value="Submit"/>
+            <br>
+        </form>
+    </body>
+</html>

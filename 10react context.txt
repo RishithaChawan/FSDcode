@@ -1,0 +1,69 @@
+import React, { Component } from 'react';
+import ComponentB from './ComponentB';
+class ComponentA extends Component{
+    render(){
+        return<ComponentB/>
+    }
+}
+export default ComponentA;
+
+
+
+import React, { Component } from 'react';
+import ComponentC from './ComponentC';
+class ComponentB extends Component{
+    render(){
+        return<ComponentC/>
+    }
+}
+export default ComponentB;
+
+
+
+import React from 'react';
+import {UserConsumer} from './UserContext';
+
+function ComponentC(){
+    return(
+        <UserConsumer>
+            {username=>{
+                return <div>Hello,{username}</div>;
+            }}
+        </UserConsumer>
+    );
+}
+export default ComponentC;
+
+
+
+import React from 'react';
+
+const UserContext = React.createContext();
+
+export const UserProvider=UserContext.Provider;
+export const UserConsumer=UserContext.Consumer;
+
+export default UserContext;
+
+
+
+import './App.css'
+import React,{Component} from 'react';
+import{UserProvider} from "./UserContext";
+import ComponentC from "./ComponentC";
+//14. Demonstration of React-context.React hooks
+
+class App extends Component{
+  render(){
+    return(
+      <div className="App">
+
+        <UserProvider value="charlie brown">
+          <ComponentC/>
+        </UserProvider>
+      </div>
+    )
+  }
+}
+
+export default App;

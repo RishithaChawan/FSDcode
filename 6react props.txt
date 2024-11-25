@@ -1,0 +1,45 @@
+import React from 'react';
+import ClassProps from "./classprops";
+import FunctionProps from "./functionprops";
+class App extends React.Component{
+    render(){
+        return(
+            <div>
+                <ClassProps name="learner1" place="davangere"></ClassProps>
+                <p>child component</p>
+                <ClassProps name="learner2" place="hubli"></ClassProps>
+                <button>click</button>
+                <FunctionProps name="learner1" place="udpi"/>
+            </div>
+        );
+    }
+}
+export default App;
+
+
+
+
+import React from "react";
+function FunctionProps(props){
+    return(
+        <div>
+            <h3>this is functional component</h3>
+            <h1>{props.name} from {props.place}. welcome to react.js </h1>
+        </div>
+    );
+}
+export default FunctionProps; 
+
+
+
+import React,{Component} from 'react';
+class ClassProps extends Component{
+    render(){
+        return(
+            <div>
+                <h1>hello{this.props.name} from {this.props.place}. welcome toreact props</h1>
+            </div>
+        );
+    }
+}
+export default ClassProps;
